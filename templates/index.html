@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+
+{%block content%}
+
+<h1>База данных студентов</h1>
+<h2>Введите данные</h2>
+
+
+<form action="{{url_for('add')}}" method="post" class="form">
+    <div class="form-group">
+        <label for="lastname">Фамилия:</label>
+        <input type="text" class="form-control form-control-sm" id="lastname" name="LASTNAME" required>
+    </div>
+    <div class="form-group">
+        <label for="firstname">Имя:</label>
+        <input type="text" class="form-control form-control-sm" id="firstname" name="FIRSTNAME" required>
+    </div>
+    <div class="form-group">
+        <label for="patronym">Отчество:</label>
+        <input type="text" class="form-control form-control-sm" id="patronym" name="PATRONYM" required>
+    </div>
+    <div class="form-group">
+        <label for="group">Номер группы:</label>
+        <input type="text" class="form-control form-control-sm" id="group" name="GROUP" required>
+    </div>
+    <button type="submit" class="btn btn-primary">OK</button>
+
+</form>
+
+{%endblock%}

@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+
+{%block content%}
+    <h1>List of students</h1>
+    <ol>
+      {%for student in sl%}
+      <li>
+        <a href="{{url_for('info', student_id=student.id)}}">{{student.lastname}} {{student.firstname[0]}}. {{student.patronym[0]}}.</a>
+      </li>
+      {%endfor %}
+    </ol>
+
+    <br>
+    <a href="{{url_for('index')}}">Home page</a>
+{%endblock%}
